@@ -12,7 +12,7 @@ export default function Index() {
     >
       <Text>{Galaxies.hello()}</Text>
       <Text>{Galaxies.PI}</Text>
-      <Text>{JSON.stringify(Galaxies.getDeviceInfo())}</Text>
+      {/* <Text>{JSON.stringify(Galaxies.getDeviceInfo())}</Text> */}
     </View>
   );
 }

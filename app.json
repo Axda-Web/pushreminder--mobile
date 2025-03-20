@@ -38,6 +38,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b7dcae0e-9bdb-48bc-8f2e-7840c2ead14b"
+      }
+    },
+    "owner": "axda-studio"
   }
 }

@@ -13,6 +13,7 @@ export default function Index() {
       setExpoPushToken(token);
     });
   }, []);
+
   return (
     <View
       style={{
@@ -21,9 +22,9 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>{Galaxies.hello()}</Text>
+      <Text style={{ color: "yellow" }}>{Galaxies.hello()}</Text>
       <Text>{Galaxies.PI}</Text>
-      <Text>{JSON.stringify(Galaxies.getDeviceInfo())}</Text>
+      {/* <Text>{JSON.stringify(Galaxies.getDeviceInfo())}</Text>*/}
       <Text>{expoPushToken}</Text>
     </View>
   );

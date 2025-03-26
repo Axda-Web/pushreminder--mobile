@@ -1,5 +1,10 @@
 import { Stack } from "expo-router";
+import { RevenueCatProvider } from "@/providers/RevenueCatProvider";
 
 export default function RootLayout() {
-  return <Stack />;
+  return (
+    <RevenueCatProvider>
+      <Stack />
+    </RevenueCatProvider>
+  );
 }

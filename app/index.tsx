@@ -4,6 +4,7 @@ import { usePush } from "@/hooks/usePush";
 import { useEffect, useState, useRef } from "react";
 import * as Notifications from "expo-notifications";
 import { Link, useRouter } from "expo-router";
+import { useRevenueCat } from "@/providers/RevenueCatProvider";
 
 export default function Index() {
   const { registerForPushNotificationsAsync } = usePush();
@@ -13,6 +14,7 @@ export default function Index() {
   const responseListener = useRef<Notifications.EventSubscription>();
 
   const router = useRouter();
+  const { goPro, isPro } = useRevenueCat();
 
   useEffect(() => {
     registerForPushNotificationsAsync()
@@ -47,6 +49,8 @@ export default function Index() {
       <Link href="/42" asChild>
         <Text>Go to page 42</Text>
       </Link>
+      <Text>Is pro: {isPro ? "Yes" : "No"}</Text>
+      <Button title="Go Pro" onPress={() => goPro!()} />
     </View>
   );
 }
